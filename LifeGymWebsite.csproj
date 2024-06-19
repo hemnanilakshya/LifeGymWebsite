@@ -1,0 +1,483 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{522F1278-F3B4-49B7-ACE7-81C90BC0395D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LifeGymWebsite</RootNamespace>
+    <AssemblyName>LifeGymWebsite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\awp\lifefitness\applefitnessclub\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccessDenied.aspx" />
+    <Content Include="assets\css\barfiller.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\flaticon.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\forms.css" />
+    <Content Include="assets\css\magnific-popup.css" />
+    <Content Include="assets\css\owl.carousel.min.css" />
+    <Content Include="assets\css\profile.css" />
+    <Content Include="assets\css\slicknav.min.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\Flaticon.svg" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\img\about-us.jpg" />
+    <Content Include="assets\img\banner-bg.jpg" />
+    <Content Include="assets\img\breadcrumb-bg.jpg" />
+    <Content Include="assets\img\classes\class-1.jpg" />
+    <Content Include="assets\img\classes\class-2.jpg" />
+    <Content Include="assets\img\classes\class-3.jpg" />
+    <Content Include="assets\img\classes\class-4.jpg" />
+    <Content Include="assets\img\classes\class-5.jpg" />
+    <Content Include="assets\img\classes\class-details\class-detailsl.jpg" />
+    <Content Include="assets\img\classes\class-details\trainer-profile.jpg" />
+    <Content Include="assets\img\gallery\gallery-1.jpg" />
+    <Content Include="assets\img\gallery\gallery-2.jpg" />
+    <Content Include="assets\img\gallery\gallery-3.jpg" />
+    <Content Include="assets\img\gallery\gallery-4.jpg" />
+    <Content Include="assets\img\gallery\gallery-5.jpg" />
+    <Content Include="assets\img\gallery\gallery-6.jpg" />
+    <Content Include="assets\img\gallery\gallery-7.jpg" />
+    <Content Include="assets\img\gallery\gallery-8.jpg" />
+    <Content Include="assets\img\gallery\gallery-9.jpg" />
+    <Content Include="assets\img\hero\hero-1.jpg" />
+    <Content Include="assets\img\hero\hero-2.jpg" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\logo_old.png" />
+    <Content Include="assets\img\services\services-1.jpg" />
+    <Content Include="assets\img\services\services-2.jpg" />
+    <Content Include="assets\img\services\services-3.jpg" />
+    <Content Include="assets\img\services\services-4.jpg" />
+    <Content Include="assets\img\sidebar-banner.jpg" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery-3.3.1.min.js" />
+    <Content Include="assets\js\jquery.barfiller.js" />
+    <Content Include="assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="assets\js\jquery.slicknav.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\masonry.pkgd.min.js" />
+    <Content Include="assets\js\owl.carousel.min.js" />
+    <Content Include="Button.css" />
+    <Content Include="Doc\css\font-awesome.min.css" />
+    <Content Include="Doc\css\main.css" />
+    <Content Include="Doc\css\normalize.min.css" />
+    <Content Include="Doc\fonts\fontawesome-webfont.svg" />
+    <Content Include="Doc\img\logo.png" />
+    <Content Include="Doc\index.html" />
+    <Content Include="Doc\js\custom.js" />
+    <Content Include="Doc\js\jquery-1.11.0.min.js" />
+    <Content Include="Doc\js\jquery.nav.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="Doc\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="Doc\syntax-highlighter\styles\shCore.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="Doc\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="Images\add-256.png" />
+    <Content Include="Images\cancel pro.png" />
+    <Content Include="Images\error404.png" />
+    <Content Include="Images\icon_error-512.png" />
+    <Content Include="Images\modify pro.png" />
+    <Content Include="Images\new pro.png" />
+    <Content Include="Images\nopic.jpg" />
+    <Content Include="Images\remove pro.png" />
+    <Content Include="Images\save pro.png" />
+    <Content Include="Images\submit.png" />
+    <Content Include="logout.aspx" />
+    <Content Include="style.css" />
+    <Content Include="ViewGym.html" />
+    <Content Include="Web.config" />
+    <Content Include="Home.aspx" />
+    <Content Include="Aboutus.aspx" />
+    <Content Include="Faqs.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="TrainerDetails.aspx" />
+    <Content Include="MemberDetails.aspx" />
+    <Content Include="CreateAccount.aspx" />
+    <Content Include="AChangePass.aspx" />
+    <Content Include="MembershipPackage.aspx" />
+    <Content Include="Areports.aspx" />
+    <Content Include="trainerprofile.aspx" />
+    <Content Include="members.aspx" />
+    <Content Include="CreateDietChart.aspx" />
+    <Content Include="TChangePass.aspx" />
+    <Content Include="memberProfile.aspx" />
+    <Content Include="ARenew.aspx" />
+    <Content Include="MyDietChart.aspx" />
+    <Content Include="dietreport.aspx" />
+    <Content Include="MChangepass.aspx" />
+    <Content Include="Treport.aspx" />
+    <Content Include="Payment.aspx" />
+    <Content Include="Mreport.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FirstMaster.Master.cs">
+      <DependentUpon>FirstMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FirstMaster.Master.designer.cs">
+      <DependentUpon>FirstMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member.Master.cs">
+      <DependentUpon>Member.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member.Master.designer.cs">
+      <DependentUpon>Member.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aboutus.aspx.cs">
+      <DependentUpon>Aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aboutus.aspx.designer.cs">
+      <DependentUpon>Aboutus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faqs.aspx.cs">
+      <DependentUpon>Faqs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faqs.aspx.designer.cs">
+      <DependentUpon>Faqs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Trainer.Master.cs">
+      <DependentUpon>Trainer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Trainer.Master.designer.cs">
+      <DependentUpon>Trainer.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerDetails.aspx.cs">
+      <DependentUpon>TrainerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainerDetails.aspx.designer.cs">
+      <DependentUpon>TrainerDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberDetails.aspx.cs">
+      <DependentUpon>MemberDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberDetails.aspx.designer.cs">
+      <DependentUpon>MemberDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount.aspx.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.aspx.designer.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AChangePass.aspx.cs">
+      <DependentUpon>AChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AChangePass.aspx.designer.cs">
+      <DependentUpon>AChangePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MembershipPackage.aspx.cs">
+      <DependentUpon>MembershipPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MembershipPackage.aspx.designer.cs">
+      <DependentUpon>MembershipPackage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Areports.aspx.cs">
+      <DependentUpon>Areports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Areports.aspx.designer.cs">
+      <DependentUpon>Areports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="trainerprofile.aspx.cs">
+      <DependentUpon>trainerprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trainerprofile.aspx.designer.cs">
+      <DependentUpon>trainerprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="members.aspx.cs">
+      <DependentUpon>members.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="members.aspx.designer.cs">
+      <DependentUpon>members.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateDietChart.aspx.cs">
+      <DependentUpon>CreateDietChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateDietChart.aspx.designer.cs">
+      <DependentUpon>CreateDietChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TChangePass.aspx.cs">
+      <DependentUpon>TChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TChangePass.aspx.designer.cs">
+      <DependentUpon>TChangePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="memberProfile.aspx.cs">
+      <DependentUpon>memberProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="memberProfile.aspx.designer.cs">
+      <DependentUpon>memberProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ARenew.aspx.cs">
+      <DependentUpon>ARenew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ARenew.aspx.designer.cs">
+      <DependentUpon>ARenew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyDietChart.aspx.cs">
+      <DependentUpon>MyDietChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyDietChart.aspx.designer.cs">
+      <DependentUpon>MyDietChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dietreport.aspx.cs">
+      <DependentUpon>dietreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dietreport.aspx.designer.cs">
+      <DependentUpon>dietreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MChangepass.aspx.cs">
+      <DependentUpon>MChangepass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MChangepass.aspx.designer.cs">
+      <DependentUpon>MChangepass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Treport.aspx.cs">
+      <DependentUpon>Treport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Treport.aspx.designer.cs">
+      <DependentUpon>Treport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mreport.aspx.cs">
+      <DependentUpon>Mreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mreport.aspx.designer.cs">
+      <DependentUpon>Mreport.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\Flaticon.eot" />
+    <Content Include="assets\fonts\Flaticon.ttf" />
+    <Content Include="assets\fonts\Flaticon.woff" />
+    <Content Include="assets\fonts\Flaticon.woff2" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="Doc\fonts\fontawesome-webfont.eot" />
+    <Content Include="Doc\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Doc\fonts\fontawesome-webfont.woff" />
+    <Content Include="Doc\fonts\FontAwesome.otf" />
+    <Content Include="FirstMaster.Master" />
+    <Content Include="Admin.Master" />
+    <Content Include="Member.Master" />
+    <None Include="packages.config" />
+    <Content Include="Trainer.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\img\icon\" />
+    <Folder Include="assets\img\post\" />
+    <Folder Include="assets\js\vendor\" />
+    <Folder Include="Images\Member\" />
+    <Folder Include="Images\Trainer\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63210</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63210/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

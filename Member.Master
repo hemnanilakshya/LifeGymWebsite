@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Member.master.cs" Inherits="LifeGymWebsite.Member" %>
+    <!doctype html>
+    <html class="no-js" lang="zxx">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Gym Template">
+        <meta name="keywords" content="Gym, unica, creative, html">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Life Gym | Member Home</title>
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+        <!-- Css Styles -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/flaticon.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/barfiller.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/slicknav.min.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/forms.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/profile.css" type="text/css">
+    </head>
+
+    <body>
+
+        <!-- Page Preloder -->
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
+
+        <!-- Offcanvas Menu Section Begin -->
+        <div class="offcanvas-menu-overlay"></div>
+        <div class="offcanvas-menu-wrapper">
+            <div class="canvas-close">
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="canvas-search search-switch">
+                <i class="fa fa-search"></i>
+            </div>
+            <nav class="canvas-menu mobile-menu">
+                <ul>
+
+                </ul>
+            </nav>
+            <div id="mobile-menu-wrap"></div>
+            <div class="canvas-social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- Offcanvas Menu Section End -->
+
+        <!-- Header Section Begin -->
+        <header class="header-section" style="background: #000;padding:0; padding: 24px;">
+            <div class="container-fluid">
+                <div class="row fa-align-justify">
+                    <div class="col-lg-3">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="assets/img//logo.png" alt="" style="height:80px">
+                            </a>
+                        </div>  
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="nav-menu">
+                            <ul style="width:56vw">
+                                <li><a href="memberProfile.aspx">Profile</a></li>
+                                <li><a href="ARenew.aspx">Renewal</a></li>
+                                <li><a href="MyDietChart.aspx">Diet Chart</a></li>
+                                <li><a href="dietreport.aspx">Diet Reports</a></li>
+                                <li><a href="MChangepass.aspx">Change Pass</a></li>
+                                <li><a href="logout.aspx">Logout</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="canvas-open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+
+
+        <section style="padding-top:100px;">
+            <form id="form1" runat="server">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </form>
+        </section>
+
+
+
+
+        <!-- Js Plugins -->
+        <script src="assets/js/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/masonry.pkgd.min.js"></script>
+        <script src="assets/js/jquery.barfiller.js"></script>
+        <script src="assets/js/jquery.slicknav.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/main.js"></script>
+
+
+
+    </body>
+
+    </html>
